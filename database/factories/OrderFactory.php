@@ -7,7 +7,7 @@ use App\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Order>
+ * @extends Factory<Order>
  */
 class OrderFactory extends Factory
 {
@@ -25,7 +25,7 @@ class OrderFactory extends Factory
             'phone_number' => fake()->phoneNumber(),
             'email'=> fake()->email(),
             'shipping_address'=>fake()->streetAddress().','.fake()->city(),
-            'notes'=> fake()->paragraph(1),
+            'notes'=> fake()->text(100),
         ];
     }
 }
